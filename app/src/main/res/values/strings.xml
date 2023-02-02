@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="movie_photo">Movie Photo</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="description">Description</string>
+    <string name="realease">Realease</string>
+    <string name="imdb_logo">Imdb Logo</string>
+    <string name="fav_logo">Fav Logo</string>
+    <string name="vote">Vote</string>
+    <string name="navigate_to_detail">Navigate to Detail</string>
+</resources>

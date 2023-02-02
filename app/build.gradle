@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id "androidx.navigation.safeargs.kotlin"
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.fucukur.moviedbapp"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures.viewBinding = true
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+}
+
+dependencies {
+    def gradle = "1.6.10"
+    def core = "1.9.0"
+    def appcompat = "1.6.0"
+    def constraintLayout = "2.1.4"
+    def legacySupport = "1.0.0"
+    def navigation = "2.5.3"
+    def paging = "3.1.1"
+    def retrofit = "2.9.0"
+    def okHTTPLogging = "4.9.1"
+    def gson = "2.9.0"
+    def shimmer = "0.5.0"
+    def junitExt = "1.1.5"
+    def espresso = "3.4.0"
+    def junit = "4.13.2"
+    def Coil = "1.4.0"
+    def Slider = "0.1.0"
+    def coroutines = "1.6.4"
+    def Fresco = "2.5.0"
+    def Hilt = "2.40.5"
+    def hiltCompiler = "1.0.0"
+    def material = "1.6.0"
+    def coroutineScope = "2.4.0"
+
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$gradle"
+    implementation "androidx.core:core-ktx:$core"
+    implementation "androidx.appcompat:appcompat:$appcompat"
+    implementation "com.google.android.material:material:$material"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayout"
+    implementation "androidx.legacy:legacy-support-v4:$legacySupport"
+    testImplementation "junit:junit:$junit"
+    androidTestImplementation "androidx.test.ext:junit:$junitExt"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso"
+    implementation "androidx.paging:paging-runtime-ktx:$paging"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$gson"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okHTTPLogging"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$coroutineScope"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$coroutineScope"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation"
+    implementation "io.coil-kt:coil:$Coil"
+    implementation "com.github.denzcoskun:ImageSlideshow:$Slider"
+    implementation "com.facebook.fresco:fresco:$Fresco"
+    implementation "com.facebook.shimmer:shimmer:$shimmer"
+    implementation "com.google.dagger:hilt-android:$Hilt"
+    kapt "com.google.dagger:hilt-android-compiler:$Hilt"
+    kapt "androidx.hilt:hilt-compiler:$hiltCompiler"
+}
